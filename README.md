@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Quiz App React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **Quiz Application built with React, TypeScript, and Vite**.  
+This project presents multiple-choice questions, tracks user answers, handles unanswered questions through a timer, and shows a final performance summary.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This quiz app allows users to:
 
-## React Compiler
+- Answer React-related multiple-choice questions
+- Move through questions one by one
+- Automatically skip a question if time runs out
+- View a final summary with:
+  - Correct answers
+  - Wrong answers
+  - Unanswered questions
+- Retry the quiz again after completion
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Built with **React**
+- Written in **TypeScript**
+- Bundled with **Vite**
+- Clean and colorful custom UI
+- Timer support for each question
+- Randomized answer order
+- Quiz result summary screen
+- Retry functionality
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **CSS**
+- **ESLint**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+quiz-app-react/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Quiz.tsx
+│   │   └── QuestionTimer.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   └── questions.ts
+├── eslint.config.js
+├── index.html
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## How It Works
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- The app loads a list of quiz questions from questions.ts
+- One question is displayed at a time
+- A timer runs for each question
+- If the user selects an answer, it is stored
+- If the timer ends before selection, the question is marked as unanswered
+- After all questions are completed, a summary screen is displayed
+- The user can click Retry to start the quiz again
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+***Author: Karthi***
+
+***GitHub: karthi-mr***
+
+## Support
+
+If you like this project, consider giving it a star on GitHub.
+
+Built with React, TypeScript, and Vite.
