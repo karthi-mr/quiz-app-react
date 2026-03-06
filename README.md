@@ -68,6 +68,13 @@ quiz-app-react/
 - After all questions are completed, a summary screen is displayed
 - The user can click Retry to start the quiz again
 
+## Deployment
+
+**This project is deployed using Firebase Hosting.**
+
+## Live Demo
+[Click here to view the app](https://quiz-app-react-1.web.app/)
+
 ***Author: Karthi***
 
 ***GitHub: karthi-mr***
