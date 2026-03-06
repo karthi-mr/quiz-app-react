@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  background: linear-gradient(120deg, pink 50%, hotpink 50%);
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+}
+
+header {
+  margin: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  letter-spacing: 0.6;
+  margin: 0;
+  text-transform: uppercase;
+  background: linear-gradient(130deg, purple 40%, deeppink 60%);
+  /* background: linear-gradient(300deg, yellow 40%, gold 60%); */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#quiz {
+  max-width: 50rem;
+  margin: auto;
+  padding: 2rem;
+  background-color: purple;
+  color: #fff;
+  box-shadow: 1px 1px 8px 4px rgba(12, 5, 32, 0.6);
+  border-radius: 30px;
+  text-align: center;
+}
+
+#question h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0.5rem 0 2.5rem 0;
+  color: pink;
+}
+
+#answers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.answer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.answer button {
+  display: inline-block;
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  background: deeppink;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.answer button:hover,
+.answer button:focus {
+  background: yellow;
+  color: black;
+}
+
+#summary {
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: purple;
+  box-shadow: 1px 1px 8px 4px rgba(12, 5, 32, 0.6);
+  border-radius: 30px;
+  text-align: center;
+}
+
+#summary h2::after {
+  display: block;
+  content: "";
+  border: 2px dashed deeppink;
+}
+
+#summary h2 {
+  color: white;
+  font-size: 2.5rem;
+  background: linear-gradient(300deg, yellow 40%, gold 60%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#question progress {
+  width: 50%;
+  height: 2rem;
+  border-radius: 25px;
+  /* background-color: blue; */
+  margin: 0;
+}
+
+#question progress::-webkit-progress-bar {
+  background: purple;
+  border-radius: 25px;
+}
+
+#question progress::-webkit-progress-value {
+  background: deeppink;
+  border-radius: 25px;
+}
+
+#summary #results {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+#summary #results li {
+  padding: 3rem;
+  background-color: darkmagenta;
+  color: white;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#summary #results li h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: linear-gradient(300deg, yellow 40%, gold 60%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#summary #results li p {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.retry-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  background-color: deeppink;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.retry-btn:hover {
+  transform: scale(1.1);
+}
+
+.retry-btn:active {
+  transform: scale(0.9);
+}
