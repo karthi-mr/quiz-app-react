@@ -35,6 +35,11 @@ This quiz app allows users to:
 - **CSS**
 - **ESLint**
 
+## Project Screenshot
+- ![screenshot_1](./screenshots/screenshot_1.png)
+- ![screenshot_2](./screenshots/screenshot_2.png)
+- ![Summary](./screenshots/summary.png)
+
 ## Project Structure
 
 ```bash
